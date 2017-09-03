@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  myproject:
+    image: geerlingguy/drupal-vm
+    container_name: fpsandbox
+    ports:
+      - 80:80
+      - 443:443
+    privileged: true
+    volumes:
+      - /var/lib/mysql
+    command: /lib/systemd/systemd
