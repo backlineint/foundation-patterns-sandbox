@@ -2,11 +2,11 @@ version: "3"
 
 services:
 
-  myproject:
+  fpsandboc:
     image: geerlingguy/drupal-vm
     container_name: fpsandbox
     ports:
-      - 80:80
+      - 8080:80
       - 443:443
     privileged: true
     volumes:
