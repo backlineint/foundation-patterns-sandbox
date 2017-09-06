@@ -2,7 +2,7 @@ version: "3"
 
 services:
 
-  fpsandboc:
+  fpsandbox:
     image: geerlingguy/drupal-vm
     container_name: fpsandbox
     ports:
@@ -10,5 +10,7 @@ services:
       - 443:443
     privileged: true
     volumes:
+      - ./foundation_patterns/:/var/www/foundation_patterns/:rw,delegated
+      - ./foundation_patterns_config/:/var/www/foundation_patterns_config/:rw,delegated
       - /var/lib/mysql
     command: /lib/systemd/systemd

@@ -1,2 +1,6 @@
 # PhpStorm IDE
 .idea
+
+# Let the project repos track these, rather than the sandbox repo.
+foundation_patterns/
+foundation_patterns_config/
