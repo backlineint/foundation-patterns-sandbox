@@ -11,3 +11,8 @@ docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cset sy
 
 # Install dependencies for Foundation Patterns Config Marketing and Enable
 docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web en -y foundation_patterns_config_marketing"
+
+# Install Pattern Lab
+# Todo - Find a way to prevent this from prompting to update config options.
+cd foundation_patterns/pattern-lab && composer install
+docker exec fpsandbox bash -c "php /var/www/drupalvm/drupal/web/themes/foundation_patterns/pattern-lab/core/console --generate"
