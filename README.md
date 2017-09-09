@@ -2,7 +2,8 @@
 
 ## Installation For Local Development
 
-* Install [Docker](https://www.docker.com/)
+* Install [Docker](https://www.docker.com/) - Choose the edge version for improved 
+file syncing performance.
 
 * Add the following line to your hosts file:
         
