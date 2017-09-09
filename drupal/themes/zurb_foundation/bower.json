@@ -1,0 +1,19 @@
+{
+  "name": "zurb_foundation6_drupal8",
+  "version": "1.0.0",
+  "description": "Zurb Foundation 6 base theme for Drupal.",
+  "license": "MIT",
+  "homepage": "https://www.drupal.org/project/zurb_foundation",
+  "dependencies": {
+    "foundation-sites": "~6.3.0",
+    "motion-ui": "~1.2.2"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
