@@ -1,0 +1,9 @@
+; This file is populated by the drupal.org packaging script with date and
+; version information for downloadable releases.
+name = Drupal Code Sniffer
+
+; Information added by Drupal.org packaging script on 2017-08-16
+version = "8.3.7+3-dev"
+project = "drupal"
+datestamp = "1502904036"
+
