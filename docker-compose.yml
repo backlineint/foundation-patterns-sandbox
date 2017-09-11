@@ -11,6 +11,7 @@ services:
     privileged: true
     volumes:
       - ./drupal:/var/www/drupalvm/drupal/web/:rw,delegated
+      - ./config/sync:/var/www/drupalvm/drupal/config/sync:rw,delegated
       - ./foundation_patterns/:/var/www/drupalvm/drupal/web/themes/foundation_patterns/:rw,delegated
       - ./foundation_patterns_config/:/var/www/drupalvm/drupal/web/modules/custom/foundation_patterns_config/:rw,delegated
       - /var/lib/mysql

@@ -5,6 +5,11 @@
 # Install Drupal
 docker exec fpsandbox bash -c "drush si standard --root=/var/www/drupalvm/drupal/web -y --db-url='mysql://drupal:drupal@localhost/drupal' --site-name='Foundation Patterns' --account-name=admin --account-pass=admin"
 
+# Apply customized settings file that updates location of config sync directory.
+docker exec fpsandbox bash -c "chmod u+w /var/www/drupalvm/drupal/web/sites/default/settings.php"
+docker exec fpsandbox bash -c "cp /var/www/drupalvm/drupal/web/sites/default/docker.settings.php /var/www/drupalvm/drupal/web/sites/default/settings.php"
+docker exec fpsandbox bash -c "chmod u-w /var/www/drupalvm/drupal/web/sites/default/settings.php"
+
 # Install dependencies for Foundation Patterns Theme and Enable
 docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web en -y zurb_foundation ui_patterns components foundation_patterns"
 docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cset system.theme default foundation_patterns -y"

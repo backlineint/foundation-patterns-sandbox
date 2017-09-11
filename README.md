@@ -45,3 +45,13 @@ You'll now be able to access Drupal at:
 ## Removing the Container
 
     docker-compose rm -s -f -v
+ 
+## Common development tasks
+
+### SSH Into Docker Container
+
+    docker exec -it fpsandbox /bin/bash
+
+### Drush
+
+    docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web <command>"

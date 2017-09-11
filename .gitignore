@@ -1,6 +1,9 @@
 # PhpStorm IDE
 .idea
 
+# MacOS
+.DS_Store
+
 # Let the project repos track these, rather than the sandbox repo.
 foundation_patterns/
 foundation_patterns_config/
@@ -8,3 +11,4 @@ foundation_patterns_config/
 # Drupal things that don't belong in repo.
 drupal/sites/default/files/
 drupal/sites/default/settings.php
+config/
