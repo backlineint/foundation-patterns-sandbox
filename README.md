@@ -5,6 +5,10 @@
 * Install [Docker](https://www.docker.com/) - Choose the edge version for improved 
 file syncing performance.
 
+* Install [Composer](https://getcomposer.org/) - [install globally](https://getcomposer.org/doc/00-intro.md#globally). 
+
+* Install Bower.
+
 * Add the following line to your hosts file:
         
         192.168.89.89  fpsandbox.dev
@@ -17,14 +21,14 @@ file syncing performance.
 
         sudo ifconfig lo0 -alias 192.168.89.89
 
-* Clone Foundation Patterns Related Projects:
+* Fork and then clone Foundation Patterns Related Projects:
 
-        git clone https://github.com/backlineint/foundation_patterns.git
-        git clone https://github.com/backlineint/foundation_patterns_config.git
+        git clone https://github.com/<your_username>/foundation_patterns.git
+        git clone https://github.com/<your_account>/foundation_patterns_config.git
 
 * Create the fpsandbox docker container: 
         
-        docker compose up -d
+        docker-compose up -d
 
 * Run configuration script:
 
@@ -38,9 +42,9 @@ You'll now be able to access Drupal at:
 
 ## Stopping / Starting the Container
 
-    docker compose stop
+    docker-compose stop
 
-    docker compose start
+    docker-compose start
 
 ## Removing the Container
 
