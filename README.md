@@ -69,3 +69,9 @@ You'll now be able to access Drupal at:
 Export config:
 
     docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cex sync -y"
+
+### Watch Tasks
+
+Watch for changes in patterns (rebuilds css, pattern lab, and clears Drupal cache):
+
+    npm run docker:watch
