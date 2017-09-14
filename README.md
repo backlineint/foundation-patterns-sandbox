@@ -1,13 +1,19 @@
 # Foundation Patterns Sandbox
 
-## Installation For Local Development
+## Prerequistes
 
-* Install [Docker](https://www.docker.com/) - Choose the edge version for improved 
+* [Docker](https://www.docker.com/) - Choose the edge version for improved 
 file syncing performance.
 
-* Install [Composer](https://getcomposer.org/) - [install globally](https://getcomposer.org/doc/00-intro.md#globally). 
+* [Composer](https://getcomposer.org/) - [install globally](https://getcomposer.org/doc/00-intro.md#globally). 
 
-* Install Bower.
+* [Node.js](https://nodejs.org/en/)
+
+* [Bower](https://bower.io/)
+
+(I know, that is a lot of stuff...)
+
+## Installation For Local Development
 
 * Add the following line to your hosts file:
         
@@ -59,3 +65,7 @@ You'll now be able to access Drupal at:
 ### Drush
 
     docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web <command>"
+
+Export config:
+
+    docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cex sync -y"

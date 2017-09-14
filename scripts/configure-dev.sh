@@ -2,8 +2,6 @@
 
 # TODO - I'd prefer to bake more of this into the Docker build, but this does the trick for now.
 
-# Todo - Bower install
-
 # Install Drupal
 docker exec fpsandbox bash -c "drush si standard --root=/var/www/drupalvm/drupal/web -y --db-url='mysql://drupal:drupal@localhost/drupal' --site-name='Foundation Patterns' --account-name=admin --account-pass=admin"
 
@@ -19,7 +17,12 @@ docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cset sy
 # Install dependencies for Foundation Patterns Config Marketing and Enable
 docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web en -y foundation_patterns_config_marketing"
 
+# Install Dependencies
+cd foundation_patterns
+bower install
+npm install
+
 # Install Pattern Lab
 # Todo - Find a way to prevent this from prompting to update config options.
-cd foundation_patterns/pattern-lab && composer install
+cd pattern-lab && composer install
 docker exec fpsandbox bash -c "php /var/www/drupalvm/drupal/web/themes/foundation_patterns/pattern-lab/core/console --generate"
