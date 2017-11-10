@@ -44,7 +44,7 @@ If asked to update config options, select n.
 
 You'll now be able to access Drupal at:
 
-    http://fpsandbox:8080
+    http://fpsandbox.dev:8080
 
 ## Stopping / Starting the Container
 
