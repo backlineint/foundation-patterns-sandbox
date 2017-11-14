@@ -14,5 +14,6 @@ services:
       - ./config/sync:/var/www/drupalvm/drupal/config/sync:rw,delegated
       - ./foundation_patterns/:/var/www/drupalvm/drupal/web/themes/foundation_patterns/:rw,delegated
       - ./foundation_patterns_config/:/var/www/drupalvm/drupal/web/modules/custom/foundation_patterns_config/:rw,delegated
+      - ./foundation_patterns_demo/:/var/www/drupalvm/drupal/web/modules/custom/foundation_patterns_demo/:rw,delegated
       - /var/lib/mysql
     command: /lib/systemd/systemd

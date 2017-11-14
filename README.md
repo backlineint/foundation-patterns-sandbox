@@ -66,9 +66,11 @@ You'll now be able to access Drupal at:
 
     docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web <command>"
 
-Export config:
+### Export config:
 
-    docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cex sync -y"
+    docker exec fpsandbox bash -c "drupal --root=/var/www/drupalvm/drupal/web config:export --directory=/var/www/drupalvm/drupal/config/sync --remove-uuid --remove-config-hash"
+
+This uses Drupal console to export configuration without UUIDs.
 
 ### Watch Tasks
 

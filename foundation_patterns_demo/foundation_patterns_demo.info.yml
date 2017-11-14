@@ -1,0 +1,9 @@
+name: Foundation Patterns Demo
+type: module
+description: Example content used to demponstrate the Foundation Patterns theme.
+core: 8.x
+package: User interface
+dependencies:
+  - system (>=8.3.0)
+  - foundation_patterns_config_marketing
+  - default_content

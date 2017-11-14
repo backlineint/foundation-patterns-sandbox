@@ -17,6 +17,18 @@ docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cset sy
 # Install dependencies for Foundation Patterns Config Marketing and Enable
 docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web en -y foundation_patterns_config_marketing"
 
+# Sync Config
+# docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cset system.site uuid '' -y"
+# docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web cim sync -y"
+
+# Install Demo Content
+docker exec fpsandbox bash -c "drush --root=/var/www/drupalvm/drupal/web en -y foundation_patterns_demo"
+
+# Install Drupal Console
+docker exec fpsandbox bash -c "curl https://drupalconsole.com/installer -L -o drupal.phar"
+docker exec fpsandbox bash -c "mv drupal.phar /usr/local/bin/drupal"
+docker exec fpsandbox bash -c "chmod +x /usr/local/bin/drupal"
+
 # Install Dependencies
 cd foundation_patterns
 bower install
