@@ -1,0 +1,4 @@
+name: fp-sandbox
+recipe: drupal8
+config:
+  webroot: web
