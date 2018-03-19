@@ -1,5 +1,29 @@
 # Foundation Patterns Sandbox
 
+## V2
+
+## Prerequistes
+
+* [Lando](https://docs.devwithlando.io/installation/installing.html) - Install 
+via dmg or homebrew.
+
+Possibly:
+
+* [Docker](https://www.docker.com/) - I think Lando installs docker, but if not, 
+you'll need to install docker.
+
+## Installation For Local Development
+
+From /drupal-project run:
+
+    lando start
+    
+    lando composer install
+    
+    lando drush si standard -y --db-url='mysql://drupal8:drupal8@database/drupal8' --site-name='Foundation Patterns' --account-name=admin --account-pass=admin
+
+## V1
+
 ## Prerequistes
 
 * [Docker](https://www.docker.com/) - Choose the edge version for improved 
@@ -17,7 +41,7 @@ file syncing performance.
 
 * Add the following line to your hosts file:
         
-        192.168.89.89  fpsandbox.dev
+        192.168.89.89  fpsandbox.local
         
 * On Mac, run:
 

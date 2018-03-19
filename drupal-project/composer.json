@@ -19,8 +19,11 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/components": "^1.0",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5",
+        "drupal/ui_patterns": "^1.0",
+        "drupal/zurb_foundation": "^6.0",
         "drush/drush": "^9.0.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
