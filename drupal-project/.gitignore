@@ -23,3 +23,7 @@
 # Keep all of Drupal outside of version control.  Not sure if this is a step too far...
 composer.lock
 /web/
+
+# Ignore submodules
+/foundation_patterns/
+/foundation_patterns_config/

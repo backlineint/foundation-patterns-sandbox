@@ -14,13 +14,27 @@ you'll need to install docker.
 
 ## Installation For Local Development
 
+Fork and then clone Foundation Patterns Related Projects into /drupal-project:
+
+        git clone https://github.com/<your_username>/foundation_patterns.git
+        git clone https://github.com/<your_username>/foundation_patterns_config.git
+
 From /drupal-project run:
 
     lando start
     
     lando composer install
     
+    lando ssh -c "mkdir /app/web/themes/custom"
+    lando ssh -c "ln -sf /app/foundation_patterns /app/web/themes/custom/foundation_patterns" 
+    lando ssh -c "mkdir /app/web/modules/custom"
+    lando ssh -c "ln -sf /app/foundation_patterns_config /app/web/modules/custom/foundation_patterns_config"
+    
     lando drush si standard -y --db-url='mysql://drupal8:drupal8@database/drupal8' --site-name='Foundation Patterns' --account-name=admin --account-pass=admin
+
+or run the following from ../scripts:
+
+    ./configure-dev-lando.sh
 
 ## V1
 
