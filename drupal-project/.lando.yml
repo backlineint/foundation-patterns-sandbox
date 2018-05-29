@@ -2,3 +2,34 @@ name: fp-sandbox
 recipe: drupal8
 config:
   webroot: web
+services:
+  appserver:
+    run:
+      - "cd $LANDO_MOUNT/web/themes/custom/foundation_patterns/pattern-lab && composer install --no-interaction"
+  database:
+    type: mysql:5.7
+  node:
+    type: node:8
+    run:
+      - "cd $LANDO_MOUNT/web/themes/custom/foundation_patterns && npm install"
+      - "cd $LANDO_MOUNT/web/themes/custom/foundation_patterns && bower install"
+    globals:
+      gulp-cli: "latest"
+      bower: "latest"
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
+    cmd:
+      - gulp
+      - --cwd=/app/web/themes/custom/foundation_patterns
+  bower:
+    service: node
+  pattern-lab:
+    service: appserver
+    cmd:
+      - php
+      - /app/web/themes/custom/foundation_patterns/pattern-lab/core/console

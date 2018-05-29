@@ -27,3 +27,9 @@ composer.lock
 # Ignore submodules
 /foundation_patterns/
 /foundation_patterns_config/
+
+# NPM
+/node_modules
+
+# DB Exports
+drupal8.*.gz

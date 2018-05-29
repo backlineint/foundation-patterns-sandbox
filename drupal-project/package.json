@@ -1,0 +1,17 @@
+{
+  "name": "foundation-patterns-sandbox",
+  "version": "1.0.0",
+  "description": "Scripts to manage theming workflow",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "scripts": {
+    "sass": "lando gulp sass",
+    "sass-patterns": "lando gulp sass-patterns",
+    "pattern-lab": "lando pattern-lab --generate",
+    "cr": "lando drush cr"
+  },
+  "author": "Brian Perry",
+  "private": true
+}
